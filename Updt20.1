@@ -1,0 +1,18 @@
+#!/bin/sh
+
+input=0
+
+echo "Search for Updates?"
+read -p "[Y/N]:" input
+
+if [ "$input" = "Y" ] || [ "$input" = "y" ];
+	then
+		sudo apt update
+		sudo apt upgrade
+	else
+		echo "Programme will be closed..."
+		sleep 0.8
+		clear
+fi
+
+exit
